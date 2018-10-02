@@ -45,11 +45,11 @@ Combine:
 ## Data to be generated collected
 List of plants with
 * Plant
-    * Name
+    * [Name](https://www.ncbi.nlm.nih.gov/genome?term=%28%22Embryophyta%22%5BOrganism%5D%20OR%20%22Embryophyta%22%5BOrganism%5D%29%20AND%20%22Eukaryota%22%5BOrganism%5D&cmd=DetailsSearch)
     * Origin
     * Specimen
 * Genome size
-    * Size
+    * [Size](https://www.ncbi.nlm.nih.gov/genome/browse/#!/overview/plants)
     * Technique of size determination
 * known rRNA copy nr
     * Technique
