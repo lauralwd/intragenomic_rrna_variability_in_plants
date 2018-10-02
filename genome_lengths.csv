@@ -1,4 +1,4 @@
-Organism_Name,Organism_Groups,Size(Mb),Chromosomes,Organelles,Plasmids,Assemblies
+Organism_Name,Organism_Groups,Size_Mb,Chromosomes,Organelles,Plasmids,Assemblies
 Amborella trichopoda,Eukaryota;Plants;Land Plants,706.495,0,1,0,1
 Ananas comosus,Eukaryota;Plants;Land Plants,382.056,25,1,0,2
 Apostasia shenzhenica,Eukaryota;Plants;Land Plants,348.733,0,0,0,1
