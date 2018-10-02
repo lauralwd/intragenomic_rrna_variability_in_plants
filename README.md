@@ -74,7 +74,7 @@ What I miss… a more evolution central experiment/explanation of the data like 
 
 Conclusion… ITS is not really trustworthy. Use single copy genomic genes. But that’s not a new advise is it. Perhaps we can give a more nuanced advise, how bad is it really in simulations and is it genome size (~copy nr) dependent.
 
-###Questions I still have
+### Questions I still have
 Has the ITS some folding function in the self-assembly of the ribosome
 
 Can we do phylogeny and alignment on a variable sequence; multiple sequence alignments of seqlogos/hmms… or is this black magic.
