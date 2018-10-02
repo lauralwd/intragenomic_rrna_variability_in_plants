@@ -1,0 +1,56 @@
+---
+title: "Genome lengths"
+output:
+  html_document:
+    df_print: paged
+---
+
+# plot the distribution of plant genome lengths
+A table of plant genomes and their respective lengths was acquired from [NCBI Entrez](https://www.ncbi.nlm.nih.gov/genome/browse/#!/overview/plants). Here I import it in R.
+
+```{r}
+#install.packages("data.table")
+library(data.table)
+ncbi_lengths <- fread(file = "./genome_lengths.csv",sep = ',',header = T)
+head(ncbi_lengths)
+```
+
+I notice that one genome has a length of 0, perhaps this will be updated in the near future. 
+```{r}
+ncbi_lengths[ncbi_lengths[,which(ncbi_lengths[,3] ==0)]]
+```
+
+Let's take it out for now
+```{r}
+ncbi_lengths <- ncbi_lengths[Size_Mb>0]
+```
+
+
+Now let's have a look at the distribution of genome lengths
+```{r}
+#install.packages("ggplot2")
+library(ggplot2)
+plot_length_dist <- ggplot(data = ncbi_lengths,mapping = aes(x=Size_Mb))
+plot_length_dist <- plot_length_dist + geom_histogram(fill='blue',binwidth = 100)
+plot_length_dist <- plot_length_dist + theme_classic()
+#plot_length_dist <- plot_length_dist + scale_x_continuous(trans = 'log10')
+plot_length_dist
+```
+
+not very intuitive, let's log transform
+
+
+```{r}
+#install.packages("ggplot2")
+#library(ggplot2)
+plot_length_dist <- ggplot(data = ncbi_lengths,mapping = aes(x=Size_Mb))
+plot_length_dist <- plot_length_dist + geom_histogram(fill='blue',binwidth = 0.1)
+plot_length_dist <- plot_length_dist + theme_classic()
+plot_length_dist <- plot_length_dist + scale_x_continuous(trans = 'log2')
+plot_length_dist
+```
+
+Funny, I had expected that peak to be a lot lower. I doubt there is genomes for all these species but that is for another time.
+
+What I really need next is to have assemblies+accession numbers -> FastQ data in a systematic way in the same sheet.
+Then most importantly, I'll need the rRNA copy numbers, ideally also in some organised fashion. 
