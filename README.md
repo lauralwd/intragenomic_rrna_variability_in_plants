@@ -50,7 +50,9 @@ List of plants with
     * Specimen
 * Genome size
     * [Size](https://www.ncbi.nlm.nih.gov/genome/browse/#!/overview/plants)
+    * Genome size as [C-values]
     * Technique of size determination
+    
 * known rRNA copy nr
     * Technique
 * raw sequencing data available
